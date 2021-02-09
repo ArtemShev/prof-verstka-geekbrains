@@ -1463,6 +1463,13 @@ box-sizing: border-box;
     border: none;
 }
 
+.join-now:hover{
+    background-color: #FFF;
+    outline: 1px solid #F16D7F;
+}
+.join-now:active{
+    background-color: #F16D7F;
+}
 .join-now-txt{
     font-weight: 400;
     font-style: normal;
@@ -1471,6 +1478,23 @@ box-sizing: border-box;
     color: #FFF;
     margin-right: 21px ;
 }
+.join-now:hover .join-now-txt{
+    color: #F16D7F;
+}
+.join-now:active .join-now-txt{
+    color: #FFF;
+}
+.svg-reg{
+    fill: #FFF;
+}
+.join-now:hover .svg-reg{
+    fill: #F16D7F;
+}
+
+.join-now:active .svg-reg{
+    fill: #FFF;
+}
+
 .loyal-span{
     text-transform: uppercase;
     font-weight: 300;
