@@ -4,7 +4,12 @@
     margin: 0;
 }
 body{
-    font-family: Lato;
+    font-family: Lato, sans-serif;
+}
+
+button:focus,
+button:active{
+    outline: none;
 }
 .container {
     width: 1600px;
@@ -50,7 +55,10 @@ body{
     transition: all 0.4s;
     color: #e8e8e8;
 }
-
+.search-input:active,
+.search-input:focus{
+    outline: 3px solid #e8e8e8;
+}
 .search-input:focus {
     width: 200px;
     opacity: 1;
@@ -610,15 +618,19 @@ border: 1px solid #F16D7F;
     width: 360px;
     z-index: 2;
 }
-
-.char_txt {
+.char-wr{
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    font-style: italic;
     color: #222224;
 }
+.char_txt {
+    font-style: normal;
+}
 
+.char_txt_ital{
+    font-style: italic;
+}
 .photo-char {
     border-radius: 100px;
     margin: 0 auto 30px auto;
@@ -672,7 +684,11 @@ border: 1px solid #F16D7F;
     padding-left: 22px;
     width: 256px;
 }
-
+.email-input:active,
+.email-input:focus{
+    outline: 2px solid #E1E1E1;
+    -moz-outline-radius:25px 0 0 25px ;
+}
 .email-btn {
     align-items: center;
     background-color: #F26376;
@@ -707,6 +723,7 @@ border: 1px solid #F16D7F;
 .email-btn:active{
     color: #F26376;
     background-color: #E1E1E1;
+    outline: none;
 }
 .white-filter {
     width: 100%;
@@ -764,33 +781,6 @@ border: 1px solid #F16D7F;
     color: #F16D7F;
 }
 
-.search-input,
-.search-input:active,
-.search-input:focus,
-.add-to-cart,
-.add-to-cart:active,
-.add-to-cart:focus,
-.account-btn,
-.account-btn:active,
-.account-btn:focus,
-.cart-btn,
-.cart-btn:active,
-.cart-btn:focus,
-.browse,
-.browse:active,
-.browse:focus,
-.email-input,
-.email-input:active,
-.email-input:focus,
-.email-btn,
-.email-btn:active,
-.email-btn:focus,
-.add-to-cart-product,
-.add-to-cart-product:active,
-.add-to-cart-product:focus
-{
-    outline: none;
-}
 
 /* -----CATALOG----- */
 
@@ -848,6 +838,8 @@ border: 1px solid #F16D7F;
 .left-ar-pag,
 .right-ar-pag{
     fill: #000;
+    background: none;
+    border: none;
 }
 .left-ar-pag:hover,
 .right-ar-pag:hover
@@ -859,6 +851,13 @@ border: 1px solid #F16D7F;
 .left-ar-pag:active
 {
     fill: #000;
+}
+.right-ar-pag:active,
+.left-ar-pag:active,
+.right-ar-pag:focus,
+.left-ar-pag:focus
+{
+    outline: none;
 }
 .active{
     font-weight: 700;
@@ -1169,10 +1168,14 @@ border: 1px solid #F16D7F;
     background-color: #fff;
     color: #A4A4A4;
     border: 1px solid #A4A4A4;
+    outline: none;
 }
-
-
-
+.input-cart-item>input:focus{
+    outline: none;
+}
+.quantity-cart{
+    display: flex;
+}
 .cart-item-head{
     text-transform: uppercase;
     font-weight: 400;
@@ -1202,6 +1205,8 @@ border: 1px solid #F16D7F;
     color: #575757;
 }
 
+
+
 .cart-price-num,
 .color-cart-id,
 .size-cart-id,
@@ -1226,9 +1231,15 @@ border: 1px solid #F16D7F;
     margin-left: 24px;
     border: 1px solid #EAEAEA;
     color: #656565;
-    padding: 0px 16px;
+    padding-left: 15px;
+    width: 44px;
+    box-sizing: border-box;
 }
 
+.quantity-cart-id:active,
+.quantity-cart-id:focus{
+    outline: 1px solid #EAEAEA;
+}
 .shipping-adress fieldset{
     border: none;
     text-transform: uppercase;
@@ -1260,7 +1271,10 @@ border: 1px solid #F16D7F;
 .ship-adress-input:nth-child(2){
     color: #222;
 }
-
+.ship-adress-input:active,
+.ship-adress-input:focus{
+    outline: 1px solid #A4A4A4;
+}
 .get-a-quote{
     margin-left: 12px;
     background-color: #FFF;
@@ -1274,6 +1288,7 @@ border: 1px solid #F16D7F;
     text-transform: uppercase;
 }
 
+
 .get-a-quote:hover{
     border: 1px solid #A4A4A4;
     background-color: #A4A4A4;
@@ -1284,6 +1299,7 @@ border: 1px solid #F16D7F;
     border: 1px solid #A4A4A4;
     color: #A4A4A4;
     background-color: #FFF;
+    outline: none;
 }
 .total{
     display: flex;
@@ -1353,7 +1369,9 @@ box-sizing: border-box;
     line-height: 19.2px;
     border: none;
 }
-
+.total input:active{
+    outline: none;
+}
 .cross{
     position: absolute;
     top: 28px;
@@ -1427,6 +1445,11 @@ box-sizing: border-box;
     line-height: 15.6px;
     border: 1px solid #A4A4A4;
 }
+.reg-input:active,
+.reg-input:focus{
+    outline: 1px solid #A4A4A4;
+}
+
 .registration input[type="text"]::-webkit-input-placeholder{
     color: #b1b1b1;
 }
