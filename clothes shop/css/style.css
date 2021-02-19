@@ -1,8 +1,9 @@
 @import url(../fonts/fonts.css);
-* {
+ * {
     padding: 0;
     margin: 0;
 }
+
 body{
     font-family: Lato, sans-serif;
 }
@@ -15,8 +16,7 @@ button:active{
     outline: none;
 }
 .container {
-    max-width: 1600px;
-    width: 100%;
+    width: 1600px;
     margin: 0 auto;
 }
 
@@ -33,7 +33,7 @@ button:active{
 .page-navbar{
     display: flex;
     background-color: #222222;
-    width: 100%;
+    width: 1600px;
     justify-content: space-between;
     position: relative;
 }
@@ -283,7 +283,7 @@ button:active{
 }
 
 .big-block {
-    width: 100%;
+    width: 1600px;
     min-height: 764px;
     display: flex;
     justify-content: flex-end;
@@ -299,7 +299,6 @@ button:active{
 
 .brand {
     margin: 0;
-
     font-style: normal;
     font-weight: 700;
     font-size: 48px;
@@ -490,7 +489,7 @@ nn{
     position: absolute;
     border: 1px solid #E8E8E8;
     margin: 188px 111px;
-    padding: 11px 14px 8px 10px;
+    padding: 11px 13px 8px 10px;
     color:#E8E8E8;
     box-sizing: border-box;
 
@@ -1128,7 +1127,7 @@ border: 1px solid #F16D7F;
 .cart-wr{
     display: flex;
     flex-direction: column;
-    margin-left: 125px;
+    margin-left: 119px;
 }
 
 .cart-item{
@@ -1573,6 +1572,11 @@ box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
+    .container,
+    .page-navbar,
+    .big-block{
+        width: 768px;
+    }
 
     .left-navbar{
         padding: 18px 0px 18px 32px;
@@ -1711,6 +1715,7 @@ box-sizing: border-box;
         flex-direction: row;
         margin-bottom: 128px;
         box-sizing: border-box;
+        margin-left: 16px;
     }
 
 
@@ -1755,6 +1760,11 @@ box-sizing: border-box;
 @media (max-width: 480px) {
 
     /* --- index ---- */
+    .container,
+    .page-navbar,
+    .big-block{
+        width: 480px;
+    }
     .left-navbar{
         padding: 18px 0px 18px 16px;
     }
